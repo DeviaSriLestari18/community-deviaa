@@ -1,0 +1,134 @@
+.case-studies {
+  background-color: #ffffff; 
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.case-studies h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: #000000;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.case-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.case-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 800px; /* Tentukan lebar maksimal untuk item */
+}
+
+.case-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.case-item:nth-child(even) {
+  flex-direction: row;
+}
+
+.case-study-image {
+  width: 300px;
+  height: 300px; /* Pertahankan proporsi gambar */
+}
+
+.case-content {
+  width: 60%; /* Sesuaikan lebar teks */
+  padding: 20px;
+  text-align: left; /* Atur teks agar rata kiri */
+}
+
+.case-study-tag {
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 6px;
+  width: 80px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.case-study-tag.finance {
+  background-color: #eec10d;
+}
+
+.case-study-tag.edtech {
+  background-color: rgba(0, 86, 179, 0.8);
+}
+
+.case-study-tag.pharma {
+  background-color: rgba(9, 201, 137, 0.8);
+}
+
+
+.case-content h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 26px;
+  color: #070707;
+  margin: 10px 0;
+  text-align: left; /* Buat judul rata kiri */
+}
+
+.case-content p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  text-align: justify; /* Justifikasi teks deskripsi */
+}
+
+.case-study-btn {
+  background-color: #00cc66;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 300px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.case-study-btn.finance {
+  background-color: #eec10d;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.case-study-btn.edtech {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.case-study-btn.pharma {
+  background-color: #09c989;
+  color: #fff;
+}
+
+.case-study-btn:hover {
+  opacity: 0.8;
+}

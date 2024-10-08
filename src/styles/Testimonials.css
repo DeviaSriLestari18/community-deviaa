@@ -1,0 +1,84 @@
+
+.testimonials-section {
+  background-color: #000;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+
+.testimonials-section h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #f1e2e2;
+  margin-bottom: 1px;
+}
+
+.testimonials-grid {
+  display: grid;
+  margin: 80px; /* Reduced margin for a more compact layout */
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 500px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr); /* Keeps two columns on medium and larger screens */
+    gap: 30px; /* Increase gap slightly for larger screens */
+    margin: 80px; /* Smaller margin for better alignment */
+  }
+}
+
+.testimonial-card {
+  background-color: transparent;
+  border-radius: 9px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  position: relative;
+  color: #fff;
+  border-left: 1px solid white; /* Adds a white border on the left side */
+  border-top: 1px solid white;   /* Adds a white border on top */
+  border-bottom: 1px solid white; /* Adds a white border at the bottom */
+}
+
+
+.testimonial-quote {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff; /* Warna teks putih untuk kutipan testimonial */
+}
+
+.quote-icon {
+  font-size: 3rem;
+  color: #fff; /* Warna ikon kutipan putih */
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+.client-image {
+  width: 50px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.client-name {
+  font-weight: bold;
+  color: #fff; /* Warna teks putih untuk nama klien */
+}
