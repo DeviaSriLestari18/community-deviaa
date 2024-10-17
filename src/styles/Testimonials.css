@@ -1,11 +1,9 @@
-
 .testimonials-section {
   background-color: #000;
   color: #fff;
-  padding: 50px;
+  padding: 50px 20px;
   text-align: center;
 }
-
 
 .testimonials-section h2 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,16 +21,16 @@
 
 .testimonials-grid {
   display: grid;
-  margin: 80px; /* Reduced margin for a more compact layout */
   grid-template-columns: 1fr;
   gap: 20px;
+  margin: 20px;
 }
 
 @media (min-width: 500px) {
   .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr); /* Keeps two columns on medium and larger screens */
-    gap: 30px; /* Increase gap slightly for larger screens */
-    margin: 80px; /* Smaller margin for better alignment */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 40px;
   }
 }
 
@@ -44,21 +42,20 @@
   text-align: left;
   position: relative;
   color: #fff;
-  border-left: 1px solid white; /* Adds a white border on the left side */
-  border-top: 1px solid white;   /* Adds a white border on top */
-  border-bottom: 1px solid white; /* Adds a white border at the bottom */
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
-
 
 .testimonial-quote {
   font-size: 1rem;
   line-height: 1.5;
-  color: #fff; /* Warna teks putih untuk kutipan testimonial */
+  color: #fff;
 }
 
 .quote-icon {
   font-size: 3rem;
-  color: #fff; /* Warna ikon kutipan putih */
+  color: #fff;
   position: absolute;
   top: -10px;
   left: 10px;
@@ -80,5 +77,61 @@
 
 .client-name {
   font-weight: bold;
-  color: #fff; /* Warna teks putih untuk nama klien */
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    margin: 20px; /* Reduce margin for mobile */
+  }
+
+  .testimonial-card {
+    padding: 1rem;
+  }
+
+  .testimonial-quote {
+    font-size: 0.9rem; /* Slightly smaller font on mobile */
+  }
+
+  .client-info {
+    margin: 1rem;
+  }
+
+  .client-image {
+    width: 45px;
+    height: 50px;
+  }
+
+  .quote-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-section h2 {
+    font-size: 24px;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-quote {
+    font-size: 0.85rem;
+  }
+
+  .client-info {
+    margin: 0.5rem;
+  }
+
+  .client-image {
+    width: 40px;
+    height: 45px;
+  }
+
+  .quote-icon {
+    font-size: 2rem;
+  }
 }

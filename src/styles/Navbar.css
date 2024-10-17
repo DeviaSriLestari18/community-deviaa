@@ -12,7 +12,7 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px;
   background-color: #222;
   max-width: 1200px;
@@ -21,18 +21,6 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #c5c1c1;
 }
-
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  padding: 15px;
-  background-color: #222;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-
-}
-
 
 .navbar ul {
   list-style: none;
@@ -56,9 +44,7 @@ body {
 
 .navbar-logo {
   margin-left: auto;
-  /* Pushes logo to the far right */
   width: 100px;
-  /* Adjust as needed */
   height: auto;
 }
 
@@ -67,6 +53,7 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 50px;
+  flex-wrap: wrap;
 }
 
 .intro-text {
@@ -74,23 +61,21 @@ body {
 }
 
 .intro-text h1 {
-  font-family: 'Arial', sans-serif; /* Ganti dengan sans-serif */
-  font-size: 30px; /* Lebih besar sesuai dengan gambar */
+  font-family: 'Arial', sans-serif; 
+  font-size: 30px; 
   font-weight: bold;
   margin-bottom: 20px;
 }
 
-
 .intro-text p {
   font-family: 'Arial', sans-serif;
   font-size: 17px;
-  line-height: 1.6; /* Sesuaikan spasi antar baris */
+  line-height: 1.6; 
   margin-bottom: 20px;
 }
 
-
 .cta-btn {
-  background:  #32CD32;
+  background: #32CD32;
   color: #fff;
   border: none;
   padding: 15px;
@@ -119,6 +104,7 @@ body {
 .logos {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .logos img {
@@ -129,4 +115,70 @@ body {
 
 .logos img:hover {
   opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .worked-with {
+    padding: 20px;
+  }
+
+  .logos img {
+    width: 80px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text h1 {
+    font-size: 24px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .cta-btn {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .profile-picture img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logos img {
+    width: 60px;
+  }
 }
