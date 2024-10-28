@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -10,44 +11,74 @@ body {
   color: #fff;
 }
 
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
   background-color: #222;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #c5c1c1;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  position: relative;
 }
 
+/* Navbar Logo */
+.navbar-logo {
+  width: 100px;
+  height: auto;
+  justify-content: center;
+}
+
+/* Navbar List */
 .navbar ul {
   list-style: none;
   display: flex;
+  align-items: center;
 }
 
+/* Navbar Items */
 .navbar ul li {
   margin-right: 20px;
   padding: 15px;
   cursor: pointer;
 }
 
-.social-icons {
-  display: flex;
+.navbar ul li a {
+  text-decoration: none;
+  color: #c5c1c1; /* Set text color explicitly */
 }
 
+/* Social Icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Social Icons Links */
 .social-icons i {
   margin-left: 10px;
   cursor: pointer;
 }
 
-.navbar-logo {
-  margin-left: auto;
-  width: 100px;
-  height: auto;
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #c5c1c1;
+  margin: 4px 0;
+}
+
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -61,8 +92,8 @@ body {
 }
 
 .intro-text h1 {
-  font-family: 'Arial', sans-serif; 
-  font-size: 30px; 
+  font-family: 'Arial', sans-serif;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -70,7 +101,7 @@ body {
 .intro-text p {
   font-family: 'Arial', sans-serif;
   font-size: 17px;
-  line-height: 1.6; 
+  line-height: 1.6;
   margin-bottom: 20px;
 }
 
@@ -80,7 +111,7 @@ body {
   border: none;
   padding: 15px;
   width: 350px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
   font-size: 18px;
   border-radius: 7px;
   cursor: pointer;
@@ -92,6 +123,7 @@ body {
   height: 200px;
 }
 
+/* Worked With Section */
 .worked-with {
   padding: 50px;
   text-align: center;
@@ -121,17 +153,38 @@ body {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 10px;
   }
 
   .navbar ul {
+    display: none; /* Hide menu initially */
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #222; /* Match navbar background */
+    position: absolute;
+    top: 60px; /* Space below navbar */
+    left: 0;
+    padding: 0;
+  }
+
+  .navbar ul.show {
+    display: block; /* Show menu when toggled */
   }
 
   .navbar ul li {
-    margin-right: 0;
-    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu on smaller screens */
+  }
+
+  .social-icons {
+    margin-top: 10px;
   }
 
   .hero {
@@ -140,8 +193,17 @@ body {
     text-align: center;
   }
 
+  .intro-text {
+    max-width: 100%;
+  }
+
   .cta-btn {
     width: 100%;
+    margin-top: 20px;
+  }
+
+  .profile-picture {
+    margin-top: 30px;
   }
 
   .profile-picture img {
@@ -153,6 +215,10 @@ body {
     padding: 20px;
   }
 
+  .logos {
+    justify-content: center;
+  }
+
   .logos img {
     width: 80px;
     height: auto;
@@ -160,6 +226,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
   .intro-text h1 {
     font-size: 24px;
   }
@@ -169,16 +239,16 @@ body {
   }
 
   .cta-btn {
-    padding: 10px;
+    padding: 15px;
     font-size: 16px;
   }
 
   .profile-picture img {
-    width: 120px;
-    height: 120px;
+    width: 125px;
+    height: 125px;
   }
 
   .logos img {
-    width: 60px;
+    width: 80px;
   }
 }

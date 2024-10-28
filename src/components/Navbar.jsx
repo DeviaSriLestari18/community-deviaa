@@ -1,4 +1,5 @@
-import '../styles/Navbar.css'
+import React, { useState } from 'react'; // Import useState
+import '../styles/Navbar.css';
 import poto from '../assets/images/poto.png';
 import click from '../assets/images/click.png';
 import drop from '../assets/images/drop.png';
@@ -7,22 +8,30 @@ import logo from '../assets/images/logo.png';
 import lgo from '../assets/images/lgo.png';
 import social from '../assets/images/social.png';
 
-
 function Navbar() {
+    const [isOpen, setIsOpen] = useState(false); 
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen); 
+    };
+
     return (
         <div className="portfolio">
             <header className="navbar">
-                <ul>
+                <div className="hamburger" onClick={toggleMenu}> 
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul className={`navbar-items ${isOpen ? 'show' : ''}`}>
                     <li>Home</li>
                     <li>Case Studies</li>
                     <li>Testimonials</li>
                     <li>Recent Work</li>
                     <li>Get In Touch</li>
-                </ul>
-                <ul>
-                    <li>
-                        <img src={social} alt="social" className="navbar-logo" />
-                    </li>
+                    <li className="navbar-logo-container">
+                    <img src={social} alt="social" className="navbar-logo" />
+                    </li> 
                 </ul>
                 <div className="social-icons">
                     <i className="fa fa-linkedin"></i>
@@ -31,13 +40,13 @@ function Navbar() {
                 </div>
             </header>
 
-            <div class="hero">
-                <div class="intro-text">
+            <div className="hero">
+                <div className="intro-text">
                     <h1>Your Name Here</h1>
                     <p>Intro text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button class="cta-btn">Let’s get started &gt;</button>
+                    <button className="cta-btn">Let’s get started &gt;</button>
                 </div>
-                <div class="profile-picture">
+                <div className="profile-picture">
                     <img src={poto} alt="poto" />
                 </div>
             </div>
@@ -53,9 +62,7 @@ function Navbar() {
                 </div>
             </div>
         </div>
-
-    )
+    );
 }
 
-export default Navbar
-
+export default Navbar;
